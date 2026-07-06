@@ -18,7 +18,7 @@ const SubjectsList = () => {
 
            <div className= "intro-row">
                <p>Quick access to essential metrics and management tools.</p>
-
+           </div>
 
            <div className="action-row">
 
@@ -32,6 +32,7 @@ const SubjectsList = () => {
                    value={searchQuery}
                    onChange={(e)=> setSearchQuery(e.target.value)}
                    />
+               </div>
                    <div className="flex gap-2 w-full sm:w-auto">
                        <Select value={selectedDepartment}
                        onValueChange={setSelectedDepartment}
@@ -47,8 +48,7 @@ const SubjectsList = () => {
                        </Select>
                    </div>
            </div>
-           </div>
-           </div>
+
 
        </ListView>
     )
