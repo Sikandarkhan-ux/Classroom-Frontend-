@@ -4,6 +4,7 @@ import {Search} from "lucide-react";
 import {Input} from "@/components/ui/input.tsx";
 import {useState} from "react";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select.tsx";
+import {DEPARTMENT_OPTIONS} from "@/constants";
 const SubjectsList = () => {
 
     const [searchQuery, setSearchQuery] = useState('');
@@ -44,6 +45,11 @@ const SubjectsList = () => {
                                <SelectItem value="all">
                                    ALL Departments
                                </SelectItem>
+                               {DEPARTMENT_OPTIONS.map(department => (
+                                   <SelectItem  key={department.value} value={department.value}>
+                                       {department.label}
+                                   </SelectItem>
+                               ))}
                            </SelectContent>
                        </Select>
                    </div>
